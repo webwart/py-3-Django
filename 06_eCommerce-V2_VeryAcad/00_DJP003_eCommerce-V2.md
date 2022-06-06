@@ -89,6 +89,10 @@ He used the method to get .csv data into a .json format suitable for upload to d
 
 [03:20:25 - Developing the product factory](https://www.youtube.com/watch?v=s3HuIRD5sUY&list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh&index=2&t=12025s)
 
+### MON 07-06-2022
+
+-1- I moved the directory back to /03_src/py-3-Django/ on NapRai and SioRai. I also did set-up a git-hub repo py3dj
+
 ## 03 - Django E-commerce Product Filter Prototype ( 3:49:55 )
 
 01.12.2021 • Welcome to part 3 of the Python Django E-commerce project version 2. In this Python Django tutorial we focus developing our understanding of Django queries and build a product filtering prototype. The purpose of the inventory app database is to maintain the data that is needed to support online retail sales and stock inventory management.
