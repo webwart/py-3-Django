@@ -10,23 +10,23 @@ vid = EbLEyM9SyZQ
 
 list  = PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh
 
-(https://www.youtube.com/watch?v=EbLEyM9SyZQ&list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh)
+[Link to YPLI](https://www.youtube.com/watch?v=EbLEyM9SyZQ&list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh)
 
 I finished this video. He explains in detail the design of the database.
 
 ## 02 - Inventory database development towards a test ( 5:10:33 )
 
-27.10.2021 • Welcome to the Django E-commerce project version 2. In this Django tutorial we focus developing an inventory app. The purpose of the inventory app database is to maintain the data that is needed to support online retail sales and stock inventory management. In this tutorial we focus on deploying the database design developed in the first tutorial. 
+27.10.2021 • Welcome to the Django E-commerce project version 2. In this Django tutorial we focus developing an inventory app. The purpose of the inventory app database is to maintain the data that is needed to support online retail sales and stock inventory management. In this tutorial we focus on deploying the database design developed in the first tutorial.
 
 For timeline see: 02-InventoryDbTestFirstApproach.docx
 
 Downloaded the code from github. I got stuck with the password (see note.md)
 
-Youtube ID Video = YVID = https://youtu.be/s3HuIRD5sUY
+Youtube ID Video = [YVID](https://youtu.be/s3HuIRD5sUY)
 
-YVIDPL = https://youtu.be/s3HuIRD5sUY?list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh
+Youptub Playlist = [YPLA](https://youtu.be/s3HuIRD5sUY?list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh)
 
-YPL = https://www.youtube.com/playlist?list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh
+[YPL](https://www.youtube.com/playlist?list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh)
 
 >N: Find solution for password and watch the video.
 
@@ -34,7 +34,7 @@ YPL = https://www.youtube.com/playlist?list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh
 
 -1- Installed .venv folder on onedrive.I added django to the .venv
 
->N: (10:07 Set-up the testing environment.)[https://youtu.be/s3HuIRD5sUY?list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh&t=614]
+>N: [10:07 Set-up the testing environment.](https://youtu.be/s3HuIRD5sUY?list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh&t=614)
 
 pytest-django
 pytest-factoryboy
@@ -66,16 +66,16 @@ Created 6 test for the category model , learned `pytest -m "not selenium"` to ex
 
 [Category model develpment](https://www.youtube.com/watch?v=s3HuIRD5sUY&list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh&index=2&t=6828s)
 
-1.  `pip install django-mptt` 
-2.  rainer and nervi56-Eval are happy. The username and password created with Selenium do not work.
-3.  python manage.py dumpdata inventory.category --indent 4 > new.json
-4.  pytest -m "not selenium" -rP   # shows more output
+1. `pip install django-mptt`
+2. rainer and nervi56-Eval are happy. The username and password created with Selenium do not work.
+3. python manage.py dumpdata inventory.category --indent 4 > new.json
+4. pytest -m "not selenium" -rP   # shows more output
 
-A very **important** learning is that pytest, seleniu, fixtures do not alter the db permanently. 
+A very **important** learning is that pytest, seleniu, fixtures do not alter the db permanently.
 
 I will use rainer as superuser (see credentials above)
 
-Xander recommand to create the records manually since we use MPTT to create parent/child database. This is funny, since the databasse is then filled already with  records. I am aware tha the data loaded with thte fixturs.json file will be used only for pytest. 
+Xander recommand to create the records manually since we use MPTT to create parent/child database. This is funny, since the databasse is then filled already with  records. I am aware tha the data loaded with thte fixturs.json file will be used only for pytest.
 
 [02:25:38 - Loading data fixtures - creating a custom command](https://www.youtube.com/watch?v=s3HuIRD5sUY&list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh&index=2&t=8726s)
 
@@ -92,6 +92,8 @@ He used the method to get .csv data into a .json format suitable for upload to d
 ### MON 07-06-2022
 
 -1- I moved the directory back to /03_src/py-3-Django/ on NapRai and SioRai. I also did set-up a git-hub repo py3dj
+
+-2- I can now pull and push from SioRai and NapRai
 
 ## 03 - Django E-commerce Product Filter Prototype ( 3:49:55 )
 
