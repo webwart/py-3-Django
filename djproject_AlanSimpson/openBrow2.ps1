@@ -1,0 +1,1 @@
+Start-Process microsoft-edge:https://stackoverflow.com -WindowStyle maximized
