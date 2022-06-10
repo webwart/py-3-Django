@@ -1,3 +1,6 @@
+# Update Django not to 4.x.x
+# use: python -m pip install --upgrade django<4.0
+# 
 alabaster==0.7.12
 appdirs==1.4.4
 asgiref==3.5.0
@@ -15,11 +18,10 @@ django-crispy-forms==1.14.0
 django-debug-toolbar==3.2.1
 django-filter==2.4.0
 django-python3-ldap==0.11.3
-# Editable install with no version control (django-tables2==2.4.1)
--e c:\users\public\03_src\py-3-django\.env\lib\site-packages
+-e git+https://github.com/webwart/py-3-Django.git@8e05690e87d492699dffc22c66a99d793e66cedc#egg=django_tables2
 djangorestframework==3.13.1
 docutils==0.17.1
-esbonio==0.11.0
+esbonio==0.13.0
 idna==3.3
 imagesize==1.3.0
 importlib-metadata==4.11.3
