@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial &mdash; django-tables2 2.4.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Populating a table with data" href="table-data.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> django-tables2
+          </a>
+              <div class="version">
+                2.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="table-data.html">Populating a table with data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Customization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="custom-data.html">Alternative column data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ordering.html">Alternative column ordering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="column-attributes.html">Column and row attributes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="column-headers-and-footers.html">Customizing headers and footers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swapping-columns.html">Swapping the position of columns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pagination.html">Pagination</a></li>
+<li class="toctree-l1"><a class="reference internal" href="table-mixins.html">Table Mixins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-rendering.html">Customizing table style</a></li>
+<li class="toctree-l1"><a class="reference internal" href="query-string-fields.html">Query string fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="localization-control.html">Controlling localization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generic-mixins.html">Class Based Generic Mixins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pinned-rows.html">Pinned rows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filtering.html">Filtering data in your table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Exporting table data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade-changelog.html">Upgrading and change log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">django-tables2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/pages/tutorial.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p>This is a step-by-step guide to learn how to install and use django-tables2 using Django 2.0 or later.</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">django-tables2</span></code></p></li>
+<li><p>Start a new Django app using <code class="xref py py-obj docutils literal notranslate"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">startapp</span> <span class="pre">tutorial</span></code></p></li>
+<li><p>Add both <code class="docutils literal notranslate"><span class="pre">&quot;django_tables2&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;tutorial&quot;</span></code> to your <code class="docutils literal notranslate"><span class="pre">INSTALLED_APPS</span></code> setting in <code class="docutils literal notranslate"><span class="pre">settings.py</span></code>.</p></li>
+</ol>
+<p>Now, add a model to your <code class="docutils literal notranslate"><span class="pre">tutorial/models.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># tutorial/models.py</span>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s2">&quot;full name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Create the database tables for the newly added model:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python manage.py makemigrations tutorial
+$ python manage.py migrate tutorial
+</pre></div>
+</div>
+<p>Add some data so you have something to display in the table:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python manage.py shell
+&gt;&gt;&gt; from tutorial.models import Person
+&gt;&gt;&gt; Person.objects.bulk_create([Person(name=&quot;Jieter&quot;), Person(name=&quot;Bradley&quot;)])
+[&lt;Person: Person object&gt;, &lt;Person: Person object&gt;]
+</pre></div>
+</div>
+<p>Now use a generic <code class="docutils literal notranslate"><span class="pre">ListView</span></code> to pass a <code class="docutils literal notranslate"><span class="pre">Person</span></code> QuerySet into a template.
+Note that the context name used by <a class="reference external" href="http://docs.djangoproject.com/en/stable/ref/class-based-views/flattened-index/#ListView" title="(in Django v4.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ListView</span></code></a> is <code class="xref py py-obj docutils literal notranslate"><span class="pre">object_list</span></code> by default:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># tutorial/views.py</span>
+<span class="kn">from</span> <span class="nn">django.views.generic</span> <span class="kn">import</span> <span class="n">ListView</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Person</span>
+
+<span class="k">class</span> <span class="nc">PersonListView</span><span class="p">(</span><span class="n">ListView</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Person</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">&#39;tutorial/people.html&#39;</span>
+</pre></div>
+</div>
+<p>Add the view to your <code class="docutils literal notranslate"><span class="pre">urls.py</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># urls.py</span>
+<span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+
+<span class="kn">from</span> <span class="nn">tutorial.views</span> <span class="kn">import</span> <span class="n">PersonListView</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s2">&quot;admin/&quot;</span><span class="p">,</span> <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">urls</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s2">&quot;people/&quot;</span><span class="p">,</span> <span class="n">PersonListView</span><span class="o">.</span><span class="n">as_view</span><span class="p">())</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Finally, create the template:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{# tutorial/templates/tutorial/people.html #}
+{% load render_table from django_tables2 %}
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;List of persons&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        {% render_table object_list %}
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<p>You should be able to load the page in the browser (<a class="reference external" href="http://localhost:8000/people/">http://localhost:8000/people/</a> by default),
+you should see:</p>
+<figure class="align-center">
+<img alt="An example table rendered using django-tables2" src="../_images/tutorial.png" />
+</figure>
+<p>This view supports pagination and ordering by default.</p>
+<p>While simple, passing a QuerySet directly to <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">render_table</span> <span class="pre">%}</span></code> does not
+allow for any customization. For that, you must define a custom <a class="reference internal" href="api-reference.html#django_tables2.tables.Table" title="django_tables2.tables.Table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table</span></code></a> class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># tutorial/tables.py</span>
+<span class="kn">import</span> <span class="nn">django_tables2</span> <span class="k">as</span> <span class="nn">tables</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Person</span>
+
+<span class="k">class</span> <span class="nc">PersonTable</span><span class="p">(</span><span class="n">tables</span><span class="o">.</span><span class="n">Table</span><span class="p">):</span>
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">Person</span>
+        <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;django_tables2/bootstrap.html&quot;</span>
+        <span class="n">fields</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>You will then need to instantiate and configure the table in the view, before
+adding it to the context:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># tutorial/views.py</span>
+<span class="kn">from</span> <span class="nn">django_tables2</span> <span class="kn">import</span> <span class="n">SingleTableView</span>
+
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Person</span>
+<span class="kn">from</span> <span class="nn">.tables</span> <span class="kn">import</span> <span class="n">PersonTable</span>
+
+
+<span class="k">class</span> <span class="nc">PersonListView</span><span class="p">(</span><span class="n">SingleTableView</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Person</span>
+    <span class="n">table_class</span> <span class="o">=</span> <span class="n">PersonTable</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s1">&#39;tutorial/people.html&#39;</span>
+</pre></div>
+</div>
+<p>Rather than passing a QuerySet to <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">render_table</span> <span class="pre">%}</span></code>, instead pass the
+table instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{# tutorial/templates/tutorial/people.html #}
+{% load render_table from django_tables2 %}
+&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;List of persons&lt;/title&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        {% render_table table %}
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+<p>This results in a table rendered with the bootstrap3 style sheet:</p>
+<figure class="align-center">
+<img alt="An example table rendered using django-tables2 with the bootstrap template" src="../_images/tutorial-bootstrap.png" />
+</figure>
+<p>At this point you have only changed the columns rendered in the table and the template.
+There are several topic you can read into to further customize the table:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Table data</dt><dd><ul>
+<li><p><a class="reference internal" href="table-data.html#table-data"><span class="std std-ref">Populating the table with data</span></a>,</p></li>
+<li><p><a class="reference internal" href="filtering.html#filtering"><span class="std std-ref">Filtering table data</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Customizing the rendered table</dt><dd><ul>
+<li><p><a class="reference internal" href="column-headers-and-footers.html#column-headers-and-footers"><span class="std std-ref">Headers and footers</span></a></p></li>
+<li><p><a class="reference internal" href="pinned-rows.html#pinned-rows"><span class="std std-ref">Pinned rows</span></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><a class="reference internal" href="api-reference.html#api-public"><span class="std std-ref">API Reference</span></a></p></li>
+</ul>
+<p>If you think you don’t have a lot customization to do and don’t want to make
+a full class declaration use <code class="docutils literal notranslate"><span class="pre">django_tables2.tables.table_factory</span></code>.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="table-data.html" class="btn btn-neutral float-right" title="Populating a table with data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

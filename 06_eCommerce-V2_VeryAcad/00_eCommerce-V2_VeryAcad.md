@@ -93,7 +93,11 @@ He used the method to get .csv data into a .json format suitable for upload to d
 
 -1- I moved the directory back to /03_src/py-3-Django/ on NapRai and SioRai. I also did set-up a git-hub repo py3dj
 
--2- I can now pull and push from SioRai and NapRai
+-2- I can now pull and push from SioRai and NapRai. >N: Verify for SioRai
+
+### Phase 4
+
+>N: [05:31:07 Developing the product inventory tests](https://www.youtube.com/watch?v=s3HuIRD5sUY&list=PLOLrQ9Pn6cay_cQkyg-WYYiJ_EKU8KWKh&index=2&t=12667s)
 
 ## 03 - Django E-commerce Product Filter Prototype ( 3:49:55 )
 

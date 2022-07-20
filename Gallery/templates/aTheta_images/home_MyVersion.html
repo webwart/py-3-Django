@@ -1,0 +1,39 @@
+{% extends 'brand/cool.html' %}  
+
+{% block content %}
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading"> 360 Image Gallery</h1>
+      <p class="lead text-muted">Click on the images to move them
+      </p>
+      <p>
+        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        {% for theta_image in images.all %}
+        <div class="col-md-4">
+
+          <div class="card mb-4 shadow-sm">
+              <a href="{{ theta_image.id}}">
+                <img src="{{ theta_image.image.url}}" with="100%">
+              </a>
+            <div class="card-body">
+              <p class="card-text">{{ theta_image.summary  }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor%}
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

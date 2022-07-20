@@ -1,0 +1,16 @@
+[
+  "test/test_ex1.py::test_example",
+  "test/test_ex1.py::test_example1",
+  "tests/test_ex1.py::test_example",
+  "tests/test_ex1.py::test_example1",
+  "tests/test_ex1.py::test_example2",
+  "tests/test_ex2.py::test_example",
+  "tests/test_ex3.py::test_example",
+  "tests/test_ex4 copy.py::test_set_check_password",
+  "tests/test_ex4.py::test_new_user",
+  "tests/test_ex4.py::test_set_check_password",
+  "tests/test_ex4.py::test_set_check_password1",
+  "tests/test_ex4.py::test_set_check_password2",
+  "tests/test_ex5.py::test_new_user",
+  "tests/test_ex5.py::test_product"
+]
